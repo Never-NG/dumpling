@@ -1,4 +1,4 @@
-module github.com/dbakit/dumpling
+module github.com/dbakit/dumpling/v4
 
 go 1.21.6
 
