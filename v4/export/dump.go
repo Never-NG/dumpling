@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pingcap/dumpling/v4/cli"
-	tcontext "github.com/pingcap/dumpling/v4/context"
-	"github.com/pingcap/dumpling/v4/log"
+	"github.com/dbakit/dumpling/v4/cli"
+	tcontext "github.com/dbakit/dumpling/v4/context"
+	"github.com/dbakit/dumpling/v4/log"
 
 	// import mysql driver
 	_ "github.com/go-sql-driver/mysql"

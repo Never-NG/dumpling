@@ -9,7 +9,7 @@ import (
 	"os"
 	"testing"
 
-	tcontext "github.com/pingcap/dumpling/v4/context"
+	tcontext "github.com/dbakit/dumpling/v4/context"
 	"github.com/stretchr/testify/require"
 
 	"github.com/DATA-DOG/go-sqlmock"
