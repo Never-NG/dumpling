@@ -1,13 +1,13 @@
 PACKAGES := go list ./... | sed '/github.com\/pingcap\/dumpling\/bin/d'
 PACKAGE_DIRECTORIES := $(PACKAGES) | sed 's/github.com\/pingcap\/dumpling\/*//'
-DUMPLING_PKG := github.com/pingcap/dumpling
+DUMPLING_PKG := github.com/dbakit/dumpling
 CHECKER := awk '{ print } END { if (NR > 0) { exit 1 } }'
 
-LDFLAGS += -X "github.com/pingcap/dumpling/v4/cli.ReleaseVersion=$(shell git describe --tags --dirty='-dev')"
-LDFLAGS += -X "github.com/pingcap/dumpling/v4/cli.BuildTimestamp=$(shell date -u '+%Y-%m-%d %I:%M:%S')"
-LDFLAGS += -X "github.com/pingcap/dumpling/v4/cli.GitHash=$(shell git rev-parse HEAD)"
-LDFLAGS += -X "github.com/pingcap/dumpling/v4/cli.GitBranch=$(shell git rev-parse --abbrev-ref HEAD)"
-LDFLAGS += -X "github.com/pingcap/dumpling/v4/cli.GoVersion=$(shell go version)"
+LDFLAGS += -X "github.com/dbakit/dumpling/cli.ReleaseVersion=$(shell git describe --tags --dirty='-dev')"
+LDFLAGS += -X "github.com/dbakit/dumpling/cli.BuildTimestamp=$(shell date -u '+%Y-%m-%d %I:%M:%S')"
+LDFLAGS += -X "github.com/dbakit/dumpling/cli.GitHash=$(shell git rev-parse HEAD)"
+LDFLAGS += -X "github.com/dbakit/dumpling/cli.GitBranch=$(shell git rev-parse --abbrev-ref HEAD)"
+LDFLAGS += -X "github.com/dbakit/dumpling/cli.GoVersion=$(shell go version)"
 
 GOBUILD := CGO_ENABLED=0 GO111MODULE=on go build -trimpath -ldflags '$(LDFLAGS)'
 GOTEST  := CGO_ENABLED=1 GO111MODULE=on go test -ldflags '$(LDFLAGS)'
@@ -50,7 +50,7 @@ check:
 static: export GO111MODULE=on
 static: tools
 	@ # Not running vet and fmt through metalinter becauase it ends up looking at vendor
-	tools/bin/govet --shadow $$($(PACKAGE_DIRECTORIES)) 2>&1 | $(CHECKER)
+	tools/bin/govet .
 
 	@# why some lints are disabled?
 	@#   gochecknoglobals - disabled because we do use quite a lot of globals
@@ -96,7 +96,7 @@ static: tools
 		--disable scopelint \
 		--disable gofumpt \
 		--disable interfacer \
-		$$($(PACKAGE_DIRECTORIES))
+		./...
 	# pingcap/errors APIs are mixed with multiple patterns 'pkg/errors',
 	# 'juju/errors' and 'pingcap/parser'. To avoid confusion and mistake,
 	# we only allow a subset of APIs, that's "Normalize|Annotate|Trace|Cause".
