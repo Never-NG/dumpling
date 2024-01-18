@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/docker/go-units"
 	"go.uber.org/zap"

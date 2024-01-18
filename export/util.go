@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/pingcap/errors"
 	"go.etcd.io/etcd/clientv3"

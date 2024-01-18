@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/pingcap/errors"

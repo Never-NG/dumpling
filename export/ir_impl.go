@@ -9,7 +9,7 @@ import (
 	"github.com/pingcap/errors"
 	"go.uber.org/zap"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 )
 
 // rowIter implements the SQLRowIter interface.

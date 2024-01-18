@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	tcontext "github.com/dbakit/dumpling/context"
-	"github.com/dbakit/dumpling/log"
+	tcontext "github.com/dbakit/dumpling/v5/context"
+	"github.com/dbakit/dumpling/v5/log"
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/failpoint"

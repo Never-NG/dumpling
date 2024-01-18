@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/tidb/br/pkg/storage"

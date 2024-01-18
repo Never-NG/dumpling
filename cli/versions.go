@@ -18,7 +18,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/log"
 )
 
 var (

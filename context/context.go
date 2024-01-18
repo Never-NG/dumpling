@@ -6,7 +6,7 @@ package context
 import (
 	gcontext "context"
 
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/log"
 )
 
 // Context is used to in dm to record some context field like

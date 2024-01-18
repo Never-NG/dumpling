@@ -23,8 +23,8 @@ import (
 	"github.com/spf13/pflag"
 	"go.uber.org/zap"
 
-	"github.com/dbakit/dumpling/cli"
-	"github.com/dbakit/dumpling/export"
+	"github.com/dbakit/dumpling/v5/cli"
+	"github.com/dbakit/dumpling/v5/export"
 )
 
 func main() {

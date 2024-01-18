@@ -15,7 +15,7 @@ import (
 	"text/template"
 	"time"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/coreos/go-semver/semver"
 	"github.com/docker/go-units"

@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dbakit/dumpling/cli"
-	tcontext "github.com/dbakit/dumpling/context"
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/cli"
+	tcontext "github.com/dbakit/dumpling/v5/context"
+	"github.com/dbakit/dumpling/v5/log"
 
 	// import mysql driver
 	_ "github.com/go-sql-driver/mysql"

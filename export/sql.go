@@ -12,11 +12,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/log"
 
 	"github.com/go-sql-driver/mysql"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/tidb/parser/model"

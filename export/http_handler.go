@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/log"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 
 	"github.com/pingcap/errors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

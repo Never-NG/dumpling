@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	tcontext "github.com/dbakit/dumpling/context"
+	tcontext "github.com/dbakit/dumpling/v5/context"
 	"github.com/pingcap/tidb-tools/pkg/filter"
 	tf "github.com/pingcap/tidb-tools/pkg/table-filter"
 	"github.com/stretchr/testify/require"

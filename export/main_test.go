@@ -19,7 +19,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/dbakit/dumpling/log"
+	"github.com/dbakit/dumpling/v5/log"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/goleak"
